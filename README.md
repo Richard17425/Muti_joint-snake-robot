@@ -9,16 +9,19 @@ Simulation based on ROS and Rviz
 ***
 ## 常见报错的解决思路
 
-- **在编译过程中如果出现报错：**
+- **1.在编译过程中如果出现报错：**
 > ERROR: cannot launch node of type [moveit_setup_assistant/moveit_setup_assistant]: Cannot locate node of type [moveit_setup_assistant] in package [moveit_setup_assistant]. Make sure file exists in package path and permission is set to executable (chmod +x)
 
-尝试解决办法：（在主目录下）
+**尝试解决办法：（在主目录下）**
 
      catkin build 
     source /opt/ros/melodic/setup.bash
     roslaunch moveit_setup_assistant setup_assistant.launch
 
+- **2.roslaunch display.launch 之后在rviz中看不到模型：**
 
+**解决办法:**
+在左边`Global Options`中的`Fixed Frame` 更改为机械臂自己的`base_link`，然后在下方`Add`之后选择`RobotModel`即可以看到机械臂的模型。
 
 ***
 ## 关于ROS中文件结构的一些知识
