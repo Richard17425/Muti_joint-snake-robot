@@ -62,3 +62,10 @@ demo是运行的总结点，打开我们可以看到他include了其他的launch
 在CSDN上看到几个在MATLAB上搭建的机械臂路径规划仿真，后面可以尝试在此基础上进行改进
 - [基于MATLAB的关节型六轴机械臂轨迹规划仿真（2021实测完整代码）](https://blog.csdn.net/mustvvvics/article/details/117025390)
 - [matlab,机械臂轨迹规划，跟踪轨迹](https://blog.csdn.net/caijifeizai/article/details/104958445)
+
+其中用到的matlab机械臂的相关函数有：
+
+- `ikine` :通过位姿求得关节角度
+- `fkine` :求得关节位姿
+- `jtraj` :五次多项式轨迹规划
+CSDN上有关于这个路径规划算法的讲解:[matlab机器人工具箱 轨迹生成函数jtraj代码详解](https://blog.csdn.net/qq_26751931/article/details/89950925)
