@@ -1,5 +1,5 @@
 # Muti_joint-snake-robot
-Simulation based on ROS and Rviz
+## **1.Simulation based on ROS and Rviz**
 官网给出的下载链接：
 [Moveit download source](https://moveit.ros.org/install/source/)
 
@@ -55,3 +55,10 @@ demo是运行的总结点，打开我们可以看到他include了其他的launch
 
 原文来自于：
 [运动规划 (Motion Planning): MoveIt! 与 OMPL](https://blog.csdn.net/cookie909/article/details/79698925)
+
+
+## **2.Simulation based on Matlab**
+
+在CSDN上看到几个在MATLAB上搭建的机械臂路径规划仿真，后面可以尝试在此基础上进行改进
+- [基于MATLAB的关节型六轴机械臂轨迹规划仿真（2021实测完整代码）](https://blog.csdn.net/mustvvvics/article/details/117025390)
+- [matlab,机械臂轨迹规划，跟踪轨迹](https://blog.csdn.net/caijifeizai/article/details/104958445)
