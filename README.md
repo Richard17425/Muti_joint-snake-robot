@@ -22,6 +22,7 @@
 
 **解决办法:**
 在左边`Global Options`中的`Fixed Frame` 更改为机械臂自己的`base_link`，然后在下方`Add`之后选择`RobotModel`即可以看到机械臂的模型。
+![](images/ros1.png)
 
 ***
 ## 关于ROS中文件结构的一些知识
@@ -59,13 +60,31 @@ demo是运行的总结点，打开我们可以看到他include了其他的launch
 
 ## **2.Simulation based on Matlab**
 
-在CSDN上看到几个在MATLAB上搭建的机械臂路径规划仿真，后面可以尝试在此基础上进行改进
+### **2.1 相关概念**
+
+CSDN上的这篇文章中有关于轨迹规划基本知识的讲解以及MATLAB相关轨迹规划函数使用的介绍
+
+[matlab smooth函数_MATLAB中的机械臂算法—轨迹规划](https://blog.csdn.net/weixin_39566387/article/details/111203245)
+
+### **2.2 仿真平台的搭建**
+在CSDN上看到几个在MATLAB上搭建的机械臂轨迹规划仿真，后面可以尝试在此基础上进行改进
 - [基于MATLAB的关节型六轴机械臂轨迹规划仿真（2021实测完整代码）](https://blog.csdn.net/mustvvvics/article/details/117025390)
+  实现效果如下：
+  ![](images/2.png)![](images/1.png) 
+
 - [matlab,机械臂轨迹规划，跟踪轨迹](https://blog.csdn.net/caijifeizai/article/details/104958445)
+ 
+   实现效果如下：
+   ![](images/3.png)
 
 其中用到的matlab机械臂的相关函数有：
 
-- `ikine` :通过位姿求得关节角度
-- `fkine` :求得关节位姿
+- `ikine` :通过位姿求得关节角度，**反向动力学函数**，使用ikine对于矩阵，即机械臂头的6DOF信息反推各个关节的角度
+- `fkine` :求得关节位姿，**前向动力学函数**，通过给定机械臂的各轴角度，可以计算到转动最后位置的矩阵
 - `jtraj` :五次多项式轨迹规划
+
+知乎上有[Matlab机器人工具箱基础代码解释](https://zhuanlan.zhihu.com/p/379449370)
+
 CSDN上有关于这个路径规划算法的讲解:[matlab机器人工具箱 轨迹生成函数jtraj代码详解](https://blog.csdn.net/qq_26751931/article/details/89950925)
+
+b站上看到有关于matlab机械臂工具包的具体教学，很具体就是。[机器人工具箱V9.10](https://space.bilibili.com/417253232/channel/seriesdetail?sid=791232)
