@@ -62,6 +62,9 @@ demo是运行的总结点，打开我们可以看到他include了其他的launch
 
 ### **2.1 相关概念**
 
+关于在Matlab上描述机械臂，之前我有做过一些学习笔记可以参考：
+[机器人运动学](https://github.com/Richard17425/FOCUS-Tasks/blob/main/Robotics%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Chapter7.md)
+
 CSDN上的这篇文章中有关于轨迹规划基本知识的讲解以及MATLAB相关轨迹规划函数使用的介绍
 
 [matlab smooth函数_MATLAB中的机械臂算法—轨迹规划](https://blog.csdn.net/weixin_39566387/article/details/111203245)
