@@ -77,6 +77,8 @@ CSDN上的这篇文章中有关于轨迹规划基本知识的讲解,以及MATLAB
   实现效果如下：
   ![](images/2.png)![](images/1.png) 
 
+关于代码的讲解可以看看b站上这个视频[MATLAB机器人工具箱10.4 机械臂仿真教学](https://www.bilibili.com/video/BV1q44y1x7WC?p=8&vd_source=72cbed57f84134f653cd0ebd0e4e2cff)
+
 - [matlab,机械臂轨迹规划，跟踪轨迹](https://blog.csdn.net/caijifeizai/article/details/104958445)
  
    实现效果如下：
@@ -99,3 +101,17 @@ CSDN上有关于这个路径规划算法的讲解:[matlab机器人工具箱 轨�
 
 b站上看到有关于matlab机械臂工具包的具体教学，很具体就是。[机器人工具箱V9.10](https://space.bilibili.com/417253232/channel/seriesdetail?sid=791232)
 
+`12.15`
+
+把之前做的机械臂的urdf的包导到matlab的simulink中(在urdf包的目录下，在工作区输入：`smimport('xxx.urdf')`，simulink中效果如下：
+![](images/5.png)
+
+运行以后效果：
+![](images/4.png)
+*注意：要先将工作区移到stl文件的目录中，不然无法显示出机械臂模型！* 
+
+
+在知乎上看到的在simulink上搭建的仿真平台，做了有逆运动学求解和轨迹规划，包括单关节控制的部分，可以跟着后面做一下。链接：
+[simulink机械臂仿真与控制（一）Multibody机械臂的搭建](https://zhuanlan.zhihu.com/p/427838340)
+
+![](images/6.png)
