@@ -101,14 +101,16 @@ CSDN上有关于这个路径规划算法的讲解:[matlab机器人工具箱 轨�
 
 b站上看到有关于matlab机械臂工具包的具体教学，很具体就是。[机器人工具箱V9.10](https://space.bilibili.com/417253232/channel/seriesdetail?sid=791232)
 
-
 `12.15`
 
 把之前做的机械臂的urdf的包导到matlab的simulink中(在urdf包的目录下，在工作区输入：`smimport('xxx.urdf')`，simulink中效果如下：
+
 ![](images/5.png)
 
 运行以后效果：
+
 ![](images/4.png)
+
 *注意：要先将工作区移到stl文件的目录中，不然无法显示出机械臂模型！* 
 
 
