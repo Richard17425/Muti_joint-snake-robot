@@ -5,6 +5,13 @@
 
 这里我在CSDN上找到一个下载的教程完成了下载：[moveit_setup](https://blog.csdn.net/qq_38156743/article/details/124131919)
 
+***
+>**[!待办!]重新尝试一下ROS上的仿真平台搭建**：<br>
+>Moveit官网链接上有Moveit Setup assistant的具体操作示例[setup_assistant_tutorial](https://moveit.picknik.ai/humble/doc/examples/setup_assistant/setup_assistant_tutorial.html) <br>
+>在B站上看到一个用OMPL库做路径规划的，虽然感觉调用了很多库，相比于Moveit要麻烦很多很多...[机械臂运动规划思路](https://www.bilibili.com/read/cv13946620) <br>
+>OMPL官方的GitHub仓库见 [ompl](https://github.com/ompl/ompl#readme) <br>
+>关于几种路径规划的方法，GitHub上有个很漂亮的归纳[PathPlanning](https://github.com/zhm-real/PathPlanning) <br>
+
 关于solidworks导出urdf文件以及在rviz中的操作，在CSDN上也有一个可以参考的文章：[solidworks2urdf](https://blog.csdn.net/king845/article/details/125918110)
 ***
 ## 常见报错的解决思路
