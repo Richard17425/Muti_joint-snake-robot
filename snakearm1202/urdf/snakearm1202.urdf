@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="snakearm1202">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.026719 0.0046387 0.21828"
+        rpy="0 0 0" />
+      <mass
+        value="2.2871" />
+      <inertia
+        ixx="0.024823"
+        ixy="3.8379E-06"
+        ixz="5.6214E-07"
+        iyy="0.024834"
+        iyz="-2.4017E-07"
+        izz="0.024839" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder_Link">
+    <inertial>
+      <origin
+        xyz="-1.4706E-15 0.069309 -9.623E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.0357" />
+      <inertia
+        ixx="0.0029447"
+        ixy="1.0615E-17"
+        ixz="0"
+        iyy="0.00053469"
+        iyz="-7.9636E-18"
+        izz="0.0029447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/shoulder_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/shoulder_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.471"
+      rpy="1.5708 0 0.091878" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_Link" />
+    <axis
+      xyz="0.082561 0 0.99659" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="upperArm_Link">
+    <inertial>
+      <origin
+        xyz="-0.074691 -2.8566E-15 -1.4486E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.0357" />
+      <inertia
+        ixx="0.00053469"
+        ixy="-8.6139E-18"
+        ixz="1.2443E-17"
+        iyy="0.0029447"
+        iyz="0"
+        izz="0.0029447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/upperArm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/upperArm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upperArm_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.334 0"
+      rpy="1.6535 0 1.5708" />
+    <parent
+      link="shoulder_Link" />
+    <child
+      link="upperArm_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="foreArm_Link">
+    <inertial>
+      <origin
+        xyz="-1.7204E-15 0.069309 -2.7107E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.0357" />
+      <inertia
+        ixx="0.0029447"
+        ixy="4.376E-18"
+        ixz="-1.3553E-20"
+        iyy="0.00053469"
+        iyz="-1.2824E-17"
+        izz="0.0029447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/foreArm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/foreArm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foreArm_joint"
+    type="revolute">
+    <origin
+      xyz="0.046 0 0"
+      rpy="-3.1416 -1.4317 1.5708" />
+    <parent
+      link="upperArm_Link" />
+    <child
+      link="foreArm_Link" />
+    <axis
+      xyz="0.13868 0 0.99034" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="wrist1_Link">
+    <inertial>
+      <origin
+        xyz="1.19874504047724E-15 0.0693094578161286 2.80109135348087E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.03570905401301" />
+      <inertia
+        ixx="0.0029446513483554"
+        ixy="-1.18061998586467E-17"
+        ixz="0"
+        iyy="0.000534693140230074"
+        iyz="6.09272003681866E-18"
+        izz="0.0029446513483554" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/wrist1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/wrist1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist1_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.19 0"
+      rpy="-3.1416 -0.26981 3.1416" />
+    <parent
+      link="foreArm_Link" />
+    <child
+      link="wrist1_Link" />
+    <axis
+      xyz="0.13031 0 -0.99147" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="wrist2_Link">
+    <inertial>
+      <origin
+        xyz="-2.6795E-15 0.069309 -1.3589E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.0357" />
+      <inertia
+        ixx="0.0029447"
+        ixy="-5.6846E-18"
+        ixz="0"
+        iyy="0.00053469"
+        iyz="1.0086E-17"
+        izz="0.0029447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/wrist2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/wrist2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.19 0"
+      rpy="-3.1416 0.81759 -3.1416" />
+    <parent
+      link="wrist1_Link" />
+    <child
+      link="wrist2_Link" />
+    <axis
+      xyz="0.63415 0 0.77321" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="wrist3_Link">
+    <inertial>
+      <origin
+        xyz="-1.6586E-15 0.069309 2.6631E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.0357" />
+      <inertia
+        ixx="0.0029447"
+        ixy="-1.2228E-17"
+        ixz="0"
+        iyy="0.00053469"
+        iyz="-7.3768E-19"
+        izz="0.0029447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/wrist3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakearm1202/meshes/wrist3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist3_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.19 0"
+      rpy="0 -1.4247 0" />
+    <parent
+      link="wrist2_Link" />
+    <child
+      link="wrist3_Link" />
+    <axis
+      xyz="0.85728 0 -0.51486" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+</robot>
