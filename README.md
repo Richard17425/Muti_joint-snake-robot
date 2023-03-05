@@ -13,6 +13,8 @@
 >关于几种路径规划的方法，GitHub上有个很漂亮的归纳[PathPlanning](https://github.com/zhm-real/PathPlanning) <br>
 
 关于solidworks导出urdf文件以及在rviz中的操作，在CSDN上也有一个可以参考的文章：[solidworks2urdf](https://blog.csdn.net/king845/article/details/125918110)
+
+找到插件的位置：工具->Tool->Export as URDF
 ***
 ## 常见报错的解决思路
 
