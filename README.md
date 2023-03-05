@@ -110,6 +110,8 @@ CSDN上有关于这个路径规划算法的讲解:[matlab机器人工具箱 轨�
 
 b站上看到有关于matlab机械臂工具包的具体教学，很具体就是。[机器人工具箱V9.10](https://space.bilibili.com/417253232/channel/seriesdetail?sid=791232)
 
+## **3.Simulation based on Simulink**
+
 `12.15`
 
 把之前做的机械臂的urdf的包导到matlab的simulink中(在urdf包的目录下，在工作区输入：`smimport('xxx.urdf')`，simulink中效果如下：
@@ -127,3 +129,17 @@ b站上看到有关于matlab机械臂工具包的具体教学，很具体就是�
 [simulink机械臂仿真与控制（一）Multibody机械臂的搭建](https://zhuanlan.zhihu.com/p/427838340)
 
 ![](images/6.png)
+
+`3.5.2023`
+
+这次尝试用MATLAB的一个插件Simscape Multibody来直接把solidworks模型导出成xml文件，再导入到simulink里面继续仿真  
+[官网下载链接](https://ww2.mathworks.cn/campaigns/offerings/download_smlink_confirmation.html?elqsid=1678002714137&potential_use=Student)  
+[官网教程](https://ww2.mathworks.cn/help/smlink/ref/linking-and-unlinking-simmechanics-link-software-with-solidworks.html;jsessionid=0cac63d68d021e4a127a8a1bef02#d124e3464)
+
+CSDN上有一个介绍：[SolidWorks模型导入到MATLAB（Simulink-Simscape）详细过程](https://blog.csdn.net/weixin_51367832/article/details/126303781#:~:text=SolidWorks%E6%A8%A1%E5%9E%8B%E5%AF%BC%E5%85%A5%E5%88%B0MATLAB%EF%BC%88Simulink-Simscape%EF%BC%89%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B%201%20%E5%AE%89%E8%A3%85Simscape%20Multibody%20Link%E6%8F%92%E4%BB%B6%20Simscape%E2%84%A2%20Multibody%E2%84%A2%20Link,...%203%20%E5%AF%BC%E5%87%BASolidWorks%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%A3%85%E9%85%8D%E4%BD%93%E6%A8%A1%E5%9E%8B%20%E5%9C%A8%E6%9C%AC%E4%BE%8B%E4%B8%AD%EF%BC%8C%E6%82%A8%E5%AF%BC%E5%87%BA%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%A4%BA%E6%9C%BA%E6%A2%B0%E8%87%82%E7%9A%84%20SolidWorks%E2%84%A2%20CAD%20%E8%A3%85%E9%85%8D%E4%BD%93%E3%80%82%20)
+
+B站上面也有一个比较详细的教学示例：
+[MATLAB simulink四足机器人仿真](https://www.bilibili.com/video/BV1ae411s7Tg/?vd_source=72cbed57f84134f653cd0ebd0e4e2cff)
+
+其中MATLAB里面把.xml导入到simulink里面用的指令是：`smimport('.xml')`  
+记得还要把matlab的工作目录切换到导出的文件下面
